@@ -1,0 +1,12 @@
+project: savantenvs/mcuboot
+target: boot_go_ecdsa_scratch
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/boot_go_ecdsa_scratch/testsuite
+
+cmds:
+  - cmd: /mayhem/mayhem/bin/fuzz_boot_go_ecdsa_scratch
+    libfuzzer: true
+    timeout: 5
+    max_length: 139264

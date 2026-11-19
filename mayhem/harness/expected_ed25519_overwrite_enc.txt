@@ -1,0 +1,5 @@
+01_empty rc=fail primary=none secondary=none
+02_valid rc=ok off=0x0 primary=1.2.3+4/3000/606deded secondary=none
+03_tampered rc=fail primary=1.2.3+4/3000/34c05cf8 secondary=none
+04_upgrade rc=ok off=0x0 primary=2.0.0+0/5008/daaf7cbe secondary=none
+05_bad_upgrade rc=ok off=0x0 primary=1.2.3+4/3000/606deded secondary=none

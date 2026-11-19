@@ -1,0 +1,12 @@
+project: savantenvs/mcuboot
+target: boot_serial_enc
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/boot_serial_enc/testsuite
+
+cmds:
+  - cmd: /mayhem/mayhem/bin/fuzz_boot_serial_enc
+    libfuzzer: true
+    timeout: 5
+    max_length: 147456
